@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AnalogClockWatch</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="clockBox">
+            <svg id="clock" width="600" height="600" viewBox="0 0 600 600">
+                <g id="clock-face">
+                    <!-- <circle class="circle" cx="300" cy="300" r="253.9" /> -->
+                    <text x="299" y="105">12</text>
+                    <text x="520" y="321">3</text>
+                    <text x="299" y="535">6</text>
+                    <text x="77.5" y="315">9</text>
+                    <path class="hour-marks" d="
+                        M 411.3 107.8 l 7.9 -13.8
+                        M 493 190.2 l 13 -7.4
+                        M 492.1 411.4 l 16.5 9.5
+                        M 411 492.3 l 8.9 15.3
+                        M 189 492.3 l -9.2 15.9
+                        M 107.7 411 L 93 419.5 
+                        M 107.5 189.3 l -17.1 -9.9
+                        M 188.1 108.2 l -9 -15.6
+                        " />
+                    <!-- <circle class="mid-cirlce" cx="300" cy="300" r="7" /> -->
+                </g>
+                <!-- <g id="dateDiv">
+                    <path d="M 422.5 395 V370 H457.5 V395 H422.5 Z" class="dateBox" stroke-linejoin="round"/>
+                    <text id="date" x="440" y="390"></text>
+                </g> -->
+
+                <g id="hour">
+                    <path class="hour-arm" d="M300.5 160.5 H 292.5 L 300.5 153 L 308.5 160.5 H 300.5 Z" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="minute">
+                    <path class="minute-arm" d="M300.5 120 H 290 L 300.5 110 L 311 120 H 300.5 Z" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="second">
+                    <path class="second-arm" d="M300.5 40 H 292.5 L 300.5 45 L 307.5 40 H 300.5 Z" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="millisec">
+                    <path class="milli-arm" d="M300.5 0 V 3 Z" />
+                    <circle class="sizing-box" cx="300" cy="300" r="253.9" />
+                </g>
+                <g id="dateBox">
+                    <path id="curveMonth"  d="M 190 290 Q 300 220 410 290 " /> 
+                    <text id="month" width="500">
+                        <textPath class="lastOrPrev" xlink:href="#curveMonth">
+                           Aug
+                        </textPath>
+                        <textPath class="now" xlink:href="#curveMonth" startOffset="50%" text-anchor="middle">
+                            Sept
+                        </textPath>
+                        <textPath class="lastOrPrev" xlink:href="#curveMonth" startOffset="72.5%">
+                            Okt
+                        </textPath>
+                    </text>
+                    <path id="curveYear"  d="M 190 320 Q 300 250 410 320 " /> 
+                    <text id="year" width="500">
+                        <textPath class="lastOrPrev" xlink:href="#curveYear" startOffset="15%">
+                           2019
+                        </textPath>
+                        <textPath class="now" xlink:href="#curveYear" startOffset="50%" text-anchor="middle">
+                            2020
+                        </textPath>
+                        <textPath class="lastOrPrev" xlink:href="#curveYear" startOffset="70%">
+                            2021
+                        </textPath>
+                    </text>
+                    <path id="curveDay"  d="M 190 355 Q 300 285 410 355 " /> 
+                    <text id="day" width="500">
+                        <textPath class="lastOrPrev" xlink:href="#curveDay" startOffset="15%">
+                           04
+                        </textPath>
+                        <textPath class="now" xlink:href="#curveDay" startOffset="50%" text-anchor="middle">
+                            05
+                        </textPath>
+                        <textPath class="lastOrPrev" xlink:href="#curveDay" startOffset="70%">
+                            06
+                        </textPath>
+                    </text>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <div id="sparkles"></div>
+</body>
+
+</html>

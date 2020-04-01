@@ -1,0 +1,170 @@
+body {
+    background-image: url("images/img2.jpg");
+    background-color: #000000b2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: darken;
+    /* height: 97.8vh; */
+}
+
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#main {
+    display: flex;
+    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    vertical-align: middle;
+}
+
+#clock {
+    background-color: black;
+    /* width: 100%; */
+    /* border: 1px solid white; */
+    border-radius: 100%;
+    box-shadow: -2px -2px 16px -5px rgba(255, 255, 255, 0.5), 2px 2px 16px rgba(0, 0, 0, 1)
+    /* -5px -5px 34px -19px rgba(255, 255, 255, 1), 10px 10px 34px -19px rgb(73, 73, 73); */
+}
+
+.circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+}
+
+.mid-cirlce {
+    fill: #fff;
+}
+
+#clock-face>text {
+    font-family: sans-serif;
+    font-size: 40pt;
+    text-anchor: middle;
+    stroke: none;
+    fill: #fff;
+}
+
+.hour-marks {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: rgb(0, 225, 255);
+    stroke: rgb(0, 225, 255);
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: rgb(43, 255, 0);
+    stroke: rgb(43, 255, 0);
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: #ff0000;
+    stroke: #ff0000;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+.milli-arm {
+    fill: none;
+    stroke: #ff7b00;
+    stroke-width: 20;
+    stroke-miterlimit: 10;
+}
+
+.sizing-box {
+    fill: none;
+}
+
+#showDate {
+    color: white;
+}
+
+#hour,
+#minute,
+#second,
+#millisec {
+    transform-origin: 300px 300px;
+    /* transition: transform 1s ease-in-out; */
+}
+
+#date {
+    font-family: sans-serif;
+    font-size: 15pt;
+    text-anchor: middle;
+    stroke: none;
+    fill: #fff;
+}
+
+#dateDiv {
+    transform-origin: 450px 390px;
+    transform: translate(10px, 10px) rotate(35deg);
+}
+
+#dateBox {
+    fill: none;
+    stroke: none;
+    stroke-width: 1;
+    stroke-miterlimit: 10;
+}
+
+#month>textPath {
+    font-family: sans-serif;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+
+#year>textPath {
+    font-family: sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#day>textPath {
+    font-family: sans-serif;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.lastOrPrev {
+    fill: rgb(107, 107, 107);
+}
+
+.now {
+    fill: white;
+    font-weight: bold;
+}
+
+#sparkles {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#sparkles span {
+    width: 1px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.678);
+    position: absolute;
+    left: -10%;
+    top: 5%;
+    transition: all 1s linear;
+    box-shadow: 0 0 5px 5px #fff;
+}
